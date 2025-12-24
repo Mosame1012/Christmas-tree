@@ -37,8 +37,11 @@ class Particle {
         element.style.width = `${this.size}px`;
         element.style.height = `${this.size}px`;
         
+        // 将所有Y坐标向下移动60px（树干长度）
+        const offsetY = this.y + 60;
+        
         // 应用位置和旋转
-        element.style.transform = `translate3d(${this.x - this.size/2}px, ${this.y - this.size/2}px, ${this.z}px) rotateY(${this.rotation}deg)`;
+        element.style.transform = `translate3d(${this.x - this.size/2}px, ${offsetY - this.size/2}px, ${this.z}px) rotateY(${this.rotation}deg)`;
         
         if (this.type !== 'star') {
             element.style.background = this.color;
@@ -50,7 +53,7 @@ class Particle {
     update(time) {
         // 添加微小的浮动动画
         const floatAmount = Math.sin(time * 0.001 + this.animationOffset) * 2;
-        const newY = this.originalPosition.y + floatAmount;
+        const newY = this.originalPosition.y + floatAmount + 60; // 向下移动60px
         
         // 修复：使用原始位置而不是当前位置，防止装饰物聚拢到中心
         this.element.style.transform = `translate3d(${this.originalPosition.x - this.size/2}px, ${newY - this.size/2}px, ${this.originalPosition.z}px) rotateY(${this.rotation}deg)`;
@@ -84,7 +87,7 @@ class StarParticle extends Particle {
         // 星星有特殊的动画效果，闪烁和轻微移动
         const twinkle = Math.sin(time * 0.003 + this.animationOffset) * 0.1 + 0.9; // 提高最低透明度
         const floatAmount = Math.sin(time * 0.001 + this.animationOffset) * 1.5;
-        const newY = this.originalPosition.y + floatAmount;
+        const newY = this.originalPosition.y + floatAmount + 60; // 向下移动60px
         
         this.element.style.transform = `translate3d(${this.originalPosition.x - this.size/2}px, ${newY - this.size/2}px, ${this.originalPosition.z}px) rotateY(${this.rotation}deg)`;
         this.element.style.opacity = twinkle;
@@ -159,7 +162,7 @@ class GiftParticle extends Particle {
     update(time) {
         // 礼物盒有轻微的摇摆动画
         const sway = Math.sin(time * 0.001 + this.animationOffset) * 2;
-        const newY = this.originalPosition.y + sway;
+        const newY = this.originalPosition.y + sway + 60; // 向下移动60px
         
         // 动态发光效果
         const glowIntensity = Math.sin(time * 0.002 + this.animationOffset) * 0.1 + 0.9;
@@ -234,7 +237,7 @@ class OrnamentParticle extends Particle {
         // 装饰球有轻微的闪烁和摆动
         const twinkle = Math.sin(time * 0.002 + this.animationOffset) * 0.1 + 0.9;
         const swing = Math.sin(time * 0.0015 + this.animationOffset) * 1.5;
-        const newY = this.originalPosition.y + swing;
+        const newY = this.originalPosition.y + swing + 60; // 向下移动60px
         
         // 动态发光效果
         const glowIntensity = Math.sin(time * 0.003 + this.animationOffset) * 0.15 + 0.85;
@@ -297,7 +300,7 @@ class TopStarParticle extends Particle {
         // 顶部星星有缓慢的旋转和发光效果
         const floatAmount = Math.sin(time * 0.0008) * 3; // 轻微浮动
         
-        const newY = this.originalPosition.y + floatAmount;
+        const newY = this.originalPosition.y + floatAmount + 60; // 向下移动60px
         
         // 主元素跟随圣诞树一起旋转
         this.element.style.transform = `translate3d(${this.originalPosition.x - this.size/2}px, ${newY - this.size/2}px, ${this.originalPosition.z}px) rotateY(${this.rotation}deg)`;
