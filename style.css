@@ -233,12 +233,13 @@ html {
 @media (max-width: 768px) {
     .header h1 {
         font-size: 2.2em;
+        margin-bottom: 10px;
     }
     
     .scene {
         width: 400px;
         height: 400px;
-        margin-top: 40px;
+        margin: 40px auto 20px;
     }
     
     .controls h1 {
@@ -258,12 +259,13 @@ html {
 @media (max-width: 480px) {
     .header h1 {
         font-size: 1.8em;
+        margin-bottom: 5px;
     }
     
     .scene {
         width: 300px;
         height: 300px;
-        margin-top: 50px;
+        margin: 50px auto 20px;
     }
     
     .controls h1 {
