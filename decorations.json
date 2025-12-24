@@ -1,0 +1,77 @@
+{
+  "theme": "classic",
+  "name": "经典圣诞主题",
+  "description": "传统的红绿金配色圣诞树",
+  "stars": {
+    "symbols": ["✨", "⭐", "🌟", "💫"],
+    "count": {
+      "perLayer": [6, 5, 4, 3, 2, 2],
+      "topStar": true
+    },
+    "colors": {
+      "primary": "#fbbf24",
+      "secondary": "#fde047",
+      "glow": "rgba(251, 191, 36, 0.8)"
+    },
+    "sizes": {
+      "regular": {
+        "min": 20,
+        "max": 32
+      },
+      "top": 50
+    }
+  },
+  "gifts": {
+    "count": 12,
+    "colors": ["#ef4444", "#3b82f6", "#10b981", "#f59e0b", "#8b5cf6"],
+    "ribbonColors": ["#fbbf24", "#ffffff"],
+    "sizes": {
+      "min": 14,
+      "max": 24
+    },
+    "distribution": {
+      "layers": 4,
+      "avoidTrunkRadius": 12
+    }
+  },
+  "ornaments": {
+    "count": 18,
+    "colors": ["#ef4444", "#3b82f6", "#10b981", "#f59e0b", "#ec4899", "#8b5cf6"],
+    "capColors": ["#d97706", "#6b7280"],
+    "sizes": {
+      "min": 10,
+      "max": 18
+    },
+    "distribution": {
+      "layers": 6,
+      "avoidTrunkRadius": 10
+    }
+  },
+  "tree": {
+    "crown": {
+      "layers": 6,
+      "particlesPerLayer": [40, 35, 30, 25, 20, 15],
+      "baseRadius": 120,
+      "layerHeight": 40,
+      "colors": {
+        "primary": "#22c55e",
+        "secondary": "#16a34a"
+      }
+    },
+    "trunk": {
+      "height": 60,
+      "radius": 15,
+      "particleCount": 40,
+      "colors": {
+        "primary": "#92400e",
+        "secondary": "#78350f"
+      }
+    }
+  },
+  "animations": {
+    "rotationSpeed": 10,
+    "starTwinkle": true,
+    "giftGlow": true,
+    "ornamentSparkle": true
+  }
+}

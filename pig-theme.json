@@ -1,0 +1,77 @@
+{
+  "theme": "pig",
+  "name": "猪猪圣诞主题",
+  "description": "可爱的猪猪主题圣诞节，充满欢乐和温馨",
+  "stars": {
+    "symbols": ["🐷", "🐽", "✨", "⭐"],
+    "count": {
+      "perLayer": [8, 6, 5, 4, 3, 3],
+      "topStar": true
+    },
+    "colors": {
+      "primary": "#fbbf24",
+      "secondary": "#fde047",
+      "glow": "rgba(251, 191, 36, 0.8)"
+    },
+    "sizes": {
+      "regular": {
+        "min": 18,
+        "max": 30
+      },
+      "top": 50
+    }
+  },
+  "gifts": {
+    "count": 20,
+    "colors": ["#ef4444", "#f59e0b", "#ec4899", "#f97316", "#e11d48"],
+    "ribbonColors": ["#fbbf24", "#ffffff"],
+    "sizes": {
+      "min": 12,
+      "max": 22
+    },
+    "distribution": {
+      "layers": 4,
+      "avoidTrunkRadius": 12
+    }
+  },
+  "ornaments": {
+    "count": 25,
+    "colors": ["#f472b6", "#fb923c", "#fbbf24", "#a78bfa", "#60a5fa"],
+    "capColors": ["#f59e0b", "#dc2626"],
+    "sizes": {
+      "min": 8,
+      "max": 16
+    },
+    "distribution": {
+      "layers": 6,
+      "avoidTrunkRadius": 10
+    }
+  },
+  "tree": {
+    "crown": {
+      "layers": 6,
+      "particlesPerLayer": [40, 35, 30, 25, 20, 15],
+      "baseRadius": 120,
+      "layerHeight": 40,
+      "colors": {
+        "primary": "#22c55e",
+        "secondary": "#16a34a"
+      }
+    },
+    "trunk": {
+      "height": 60,
+      "radius": 15,
+      "particleCount": 40,
+      "colors": {
+        "primary": "#92400e",
+        "secondary": "#78350f"
+      }
+    }
+  },
+  "animations": {
+    "rotationSpeed": 10,
+    "starTwinkle": true,
+    "giftGlow": true,
+    "ornamentSparkle": true
+  }
+}
